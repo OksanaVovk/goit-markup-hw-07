@@ -70,7 +70,7 @@ body {
   text-decoration: none;
 }
 
-.web-logo {
+.logo__web {
   color: var(--accent-color);
 }
 .logo.footer {
@@ -99,8 +99,8 @@ body {
   align-items: center;
 }
 
-.site-nav .link,
-.contacts .link {
+.site-nav__link,
+.contacts__link {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -114,10 +114,10 @@ body {
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav .link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -137,11 +137,11 @@ body {
   align-items: center;
 }
 
-.contacts .item:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts .link {
+.contacts__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link.current::after {
+.site-nav__link.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -164,31 +164,31 @@ body {
   background-color: var(--accent-color);
 }
 
-.envelope {
+.contacts__icon--envelope {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.smartphone {
+.contacts__icon--smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.contacts .link:hover,
-.contacts .link:focus,
+.site-nav__link:hover,
+.site-nav__link:focus,
+.contacts__link:hover,
+.contacts__link:focus,
 .contacts-footer .link:hover,
 .contacts-footer .link:focus {
   color: var(--accent-color);
 }
 
 /* головна частина */
-.main-part {
+.main {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -207,7 +207,7 @@ body {
   background-color: var(--banner-color);
 }
 
-.main-title {
+.main__title {
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--background-color);
@@ -218,7 +218,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.main-button {
+.main__button {
   border: 0;
   border-radius: 4px;
   padding: 10px 32px;
@@ -241,8 +241,8 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-button:hover,
-.main-button:focus {
+.main__button:hover,
+.main__button:focus {
   background-color: var(--accent-color-button);
 }
 
@@ -292,13 +292,13 @@ body {
     opaсity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.vector {
+.modal__icon {
   width: 11px;
   height: 11px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-window {
+.modal__button--close {
   display: flex;
   width: 30px;
   height: 30px;
@@ -314,12 +314,12 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.close-window:hover .vector,
-.close-window:focus .vector {
+.modal__button--close:hover .modal__icon,
+.modal__button--close:focus .modal__icon {
   fill: var(--accent-color);
 }
 
-.title-modal {
+.modal__title {
   margin: 0;
   margin-bottom: 12px;
   font-weight: bold;
@@ -336,7 +336,7 @@ body {
   align-items: center;
 }
 
-.text-form {
+.form__text {
   display: block;
   margin-top: 0;
   margin-bottom: 4px;
@@ -345,18 +345,18 @@ body {
   letter-spacing: 0.01em;
 }
 
-.form-label {
+.form__label {
   display: block;
   width: 100%;
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-label.coment {
+.form__label--coment {
   margin-bottom: 20px;
 }
 
-.form-input {
+.form__input {
   display: block;
   width: 100%;
   height: 40px;
@@ -367,17 +367,17 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-label:focus-within .form-input,
-.form-label:hover .form-input {
+.form__label:focus-within .form__input,
+.form__label:hover .form__input {
   border-color: var(--accent-color);
 }
 
-.form-label:focus-within .icon-form,
-.form-label:hover .icon-form {
+.form__label:focus-within .form__icon,
+.form__label:hover .form__icon {
   fill: var(--accent-color);
 }
 
-.icon-form {
+.form__icon {
   display: block;
   width: 18px;
   height: 18px;
@@ -387,14 +387,14 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input.text-coment {
+.form__input--coment {
   display: block;
   width: 100%;
   height: 120px;
   padding: 12px 16px;
 }
 
-.text-coment::placeholder {
+.form__input--coment::placeholder {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -403,37 +403,37 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form-label.checkbox {
+.form__label--checkbox {
   display: flex;
   margin-bottom: 30px;
   align-items: center;
   justify-content: center;
 }
 
-.text-checkbox {
+.form__text--checkbox {
   display: block;
   font-size: 14px;
   line-height: 1.71;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 35px;
 }
 
-.form-input-checkbox:checked ~ .icon-choose {
+.form__input--checkbox:checked ~ .form__icon--choose {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-origin: content-box;
 }
 
-.form-input-checkbox:focus ~ .icon-choose,
-.form-label.checkbox:hover .icon-choose {
+.form__label--checkbox:hover .form__icon--choose,
+.form__input--checkbox:focus ~ .form__icon--choose {
   border-color: var(--accent-color);
 }
 
-.form-link {
+.form__link {
   color: var(--accent-color);
   margin: 0;
 }
-.icon-choose {
+.form__icon--choose {
   position: absolute;
   top: 4px;
   left: 12px;
@@ -445,7 +445,7 @@ body {
   border: 2px solid var(--title-text-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-send {
+.form__button--send {
   display: block;
   width: 200px;
   height: 50px;
@@ -463,24 +463,24 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-send:hover,
-.button-send:focus {
+.form__button--send:hover,
+.form__button--send:focus {
   background-color: var(--accent-color-button);
 }
 /* Секції - фон,текст */
-.specifics-list {
+.specifics__list {
   display: flex;
 }
 
-.specifics-item {
+.specifics__item {
   width: 270px;
 }
 
-.specifics-item:not(:last-child) {
+.specifics__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.specifics-icon {
+.specifics__card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -491,7 +491,7 @@ body {
   background: var(--section-color);
   border-radius: 4px;
 }
-.icon {
+.specifics__icon {
   width: 70px;
   height: 70px;
 }
@@ -506,7 +506,7 @@ body {
   text-align: center;
 }
 
-.specifics-item .title-item {
+.specifics__title {
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -515,26 +515,26 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.specifics-item p {
+.specifics__text {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 /* чим займаємося */
-.list.work-list {
+.work__list {
   display: flex;
   margin-top: 50px;
 }
 
-.work-list .item:not(:last-child) {
+.work__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work-card {
+.work__card {
   position: relative;
 }
 
-.work-text {
+.work__text {
   margin: 0;
   font-weight: bold;
   font-size: 14px;
@@ -545,7 +545,7 @@ body {
   color: var(--background-color);
 }
 
-.work-discription {
+.work__discription {
   display: flex;
   position: absolute;
   left: 0;
@@ -561,11 +561,11 @@ body {
   background-color: var(--section-color);
 }
 
-.list.workers-list {
+.workers__list {
   display: flex;
 }
 
-.workers-item:not(:last-child) {
+.workers__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -575,19 +575,19 @@ img {
   height: auto;
 }
 
-.card {
+.workers-card {
   box-shadow: var(--boder-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
 }
 
-.card-content {
+.workers-card__content {
   padding: 30px 32px;
 
   background-color: var(--background-color);
 }
 
-.workers-item .title-item {
+.workers-card__title {
   margin-bottom: 10px;
   margin-top: 0;
   color: var(--title-text-color);
@@ -597,7 +597,7 @@ img {
   text-align: center;
 }
 
-.workers-item .profession {
+.workers-card__text {
   margin-top: 0;
   margin-bottom: 16px;
 
@@ -606,23 +606,23 @@ img {
   text-align: center;
 }
 
-.site-list {
+.social-networks {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.site-item:not(:last-child) {
+.social-networks__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.icon-site {
+.social-networks__icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
 
-.site-item .link {
+.social-networks__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -635,24 +635,24 @@ img {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-item .link:hover,
-.site-item .link:focus {
+.social-networks__link:hover,
+.social-networks__link:focus {
   background-color: var(--accent-color);
   color: var(--background-color);
 }
 
 /* наші клієнти */
-.clients.section {
+.clients {
   padding-top: 86px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.clients-item .link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -664,24 +664,24 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     boder-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.icon-client {
+.clients__icon {
   width: 106px;
   height: 60px;
   fill: currentColor;
 }
 
-.clients-item .link:hover,
-.clients-item .link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
 /* футер */
-.conteiner.footer {
+.page-footer__conteiner {
   display: flex;
   align-items: baseline;
 }
@@ -697,11 +697,11 @@ img {
   margin-top: 20px;
 }
 
-.contacts-footer .item:not(:last-child) {
+.contacts-footer__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.contacts-footer .link {
+.contacts-footer__link {
   color: var(--footer-contacts-color);
   font-style: normal;
   font-size: 14px;
@@ -712,7 +712,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-footer .place {
+.ontacts-footer__link--place {
   color: var(--background-color);
   text-decoration: none;
 }
@@ -724,7 +724,7 @@ img {
   margin-left: 70px;
 }
 
-.title-item.footer {
+.footer-title {
   font-size: 14px;
   font-weight: bold;
   line-height: 1.14;
@@ -734,11 +734,11 @@ img {
   margin-bottom: 20px;
 }
 
-.icon-site.footer {
+.footer .social-networks__icon {
   fill: var(--background-color);
 }
 
-.site-item.footer .link {
+.footer .social-networks__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -749,8 +749,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-item.footer .link:hover,
-.site-item.footer .link:focus {
+.footer .social-networks__link:hover,
+.footer .social-networks__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -758,11 +758,11 @@ img {
   margin-left: auto;
 }
 
-.follow-form {
+.follow__form {
   display: flex;
 }
 
-.input-follow {
+.follow__input {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -774,14 +774,14 @@ img {
   border-radius: 4px;
 }
 
-.input-follow::placeholder {
+.follow__input::placeholder {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.button-follow {
+.follow__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -801,11 +801,11 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-follow:hover,
-.button-follow:focus {
+.follow__button:hover,
+.follow__button:focus {
   background-color: var(--accent-color-button);
 }
-.icon-follow {
+.follow__icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
@@ -814,19 +814,19 @@ img {
 /* Сторінка ПОРТФОЛІО */
 
 /* фільтр */
-.filter.list {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
 .filter {
   list-style: none;
 }
-.button-filter {
+.filter__button {
   padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--section-color);
@@ -844,9 +844,9 @@ img {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-filter:hover,
-.button-filter:focus,
-.button-filter.current {
+.filter__button:hover,
+.filter__button:focus,
+.filter__button.current {
   background-color: var(--accent-color);
   color: var(--background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -854,49 +854,49 @@ img {
 }
 
 /* роботи */
-.example.list {
+.example {
   display: flex;
   flex-wrap: wrap;
 }
 
-.example-item {
+.example__item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
-.example-picture {
+.example-card {
   position: relative;
   overflow: hidden;
 }
 
-.example-link {
+.example__link {
   text-decoration: none;
   display: block;
   overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.example-link:hover,
-.example-link:focus {
+.example__link:hover,
+.example__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.example-link:hover .text-hover,
-.example-link:focus .text-hover {
+.example__link:hover .example-card__slide,
+.example__link:focus .example-card__slide {
   transform: translateY(0);
 }
 
-.example-item:nth-child(3n) {
+.example__item:nth-child(3n) {
   margin-right: 0;
 }
 
-.example-item:nth-last-child(-n + 3) {
+.example__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.text {
+.example-description {
   display: block;
   background-color: var(--background-color);
   padding: 20px 24px;
@@ -906,7 +906,7 @@ img {
   border-right: 1px solid var(--boder-color-portfolio);
 }
 
-.example-text {
+.example-description__text {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -915,7 +915,7 @@ img {
   color: var(--primary-text-color);
 }
 
-.work-title {
+.example-description__title {
   margin-top: 0;
   margin-bottom: 4px;
   color: var(--title-text-color);
@@ -924,7 +924,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.text-hover {
+.example-card__slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -934,7 +934,7 @@ img {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.text-hover p {
+.example-card__text-slide {
   margin: 0;
   font-size: 18px;
   line-height: 1.56;
